@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
     <>
-      <section className="h-screen w-screen flex flex-col bg-black text-center overflow-hidden relative">
+      <section className="h-screen w-full flex flex-col bg-black text-center overflow-hidden relative">
         <div className="flex flex-col h-full z-30 relative">
           <header>
             <h1 className="text-white pt-24 text-[40px] font-medium">
@@ -27,12 +27,8 @@ const HeroSection = () => {
             autoPlay
             muted
             loop
-            className="object-center object-cover h-full w-full"
+            className="object-center object-cover h-full w-full bg-center"
           ></video>
-          {/* <img
-            src="/spider-metro.jpeg"
-            className="h-full max-w-max bg-cover bg-center selection:bg-none"
-          /> */}
         </div>
       </section>
     </>
