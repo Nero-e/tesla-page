@@ -1,4 +1,4 @@
-const Model3Section = () => {
+const ModelYSection = () => {
   return (
     <>
       <section className="h-screen w-full flex flex-col bg-black text-center overflow-hidden relative">
@@ -31,7 +31,7 @@ const Model3Section = () => {
         <div className="absolute bottom-0 top-0 left-0 right-0 h-full w-full z-10 flex items-center justify-center">
           <img
             className="object-center object-cover h-full w-full bg-center"
-            src="/Model3.avif"
+            src="/ModelY.avif"
           />
         </div>
       </section>
@@ -39,4 +39,4 @@ const Model3Section = () => {
   );
 };
 
-export default Model3Section;
+export default ModelYSection;
