@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import HeroSection from "@/components/HeroSection";
 import LandingHeader from "@/components/LandingHeader";
 import Model3Section from "@/components/Model3Section";
@@ -8,34 +12,37 @@ import PowerwallSection from "@/components/PowerwallSection";
 import SolarPanelSection from "@/components/SolarPanelSection";
 import SolarRoofSection from "@/components/SolarRoofSection";
 export default function Home() {
+  const [isDark, setIsDark] = useState<boolean>(false);
+
   return (
     <>
-      <LandingHeader />
+      <LandingHeader isDark={isDark}/>
 
       <main className="relative w-full h-screen overflow-auto snap-y snap-mandatory">
         <div className="snap-start">
-          <HeroSection />
+          {/* <h1 className="text-white mix-blend-difference">Hola mundo</h1> */}
+          <HeroSection setIsDark={setIsDark}/>
         </div>
         <div className="snap-start">
-          <Model3Section/>
+          <Model3Section />
         </div>
         <div className="snap-start">
-          <ModelYSection/>
+          <ModelYSection />
         </div>
         <div className="snap-start">
-          <ModelSSection/>
+          <ModelSSection />
         </div>
         <div className="snap-start">
-          <ModelXSection/>
+          <ModelXSection />
         </div>
         <div className="snap-start">
-          <SolarPanelSection/>
+          <SolarPanelSection />
         </div>
         <div className="snap-start">
-          <SolarRoofSection/>
+          <SolarRoofSection />
         </div>
         <div className="snap-start">
-          <PowerwallSection/>
+          <PowerwallSection />
         </div>
       </main>
     </>

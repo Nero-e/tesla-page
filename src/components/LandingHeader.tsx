@@ -1,44 +1,57 @@
 import TeslaLogo from "./TeslaLogo";
-const LandingHeader = () => {
+
+type LandingHeaderProps = {
+  isDark: boolean;
+};
+
+const LandingHeader = ({ isDark }: LandingHeaderProps) => {
   return (
     <>
-      <header className="flex items-center fixed top-0 w-full justify-between px-8 py-3 font-medium text-white text z-40">
-        <div className="flex flex-grow basis-0">
+      <header
+        className={`flex items-center fixed w-full justify-between px-8 py-3 font-medium text z-40 h-16
+        } ${
+          isDark
+            ? "text-white transition-all ease-in"
+            : "text-black transition-all ease-in"
+        }`}
+      >
+        <div>
           <TeslaLogo />
         </div>
-        <nav className="">
-          <ul className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a>span]:mx-2">
-            <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
-              <a href="#">
-                <span>Cards</span>
-              </a>
-            </li>
-            <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
-              <a href="#">
-                <span>Technology</span>
-              </a>
-            </li>
-            <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
-              <a href="#">
-                <span>Projects</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav className="flex flex-grow basis-0 justify-end">
-          <ul className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a>span]:mx-2">
-            <li>
-              <a href="#">
-                <span>About Me</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>Github</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <ul className="hidden lg:flex text-sm [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:mx-2">
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Vehicles</span>
+            </a>
+          </li>
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Energy</span>
+            </a>
+          </li>
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Charging</span>
+            </a>
+          </li>
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Discover</span>
+            </a>
+          </li>
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Shop</span>
+            </a>
+          </li>
+        </ul>
+        <ul className="hidden lg:flex text-sm [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 [&>li>a]:mx-2">
+          <li className="hover:bg-white/10 hover:backdrop-blur-md rounded">
+            <a href="#">
+              <span>Account</span>
+            </a>
+          </li>
+        </ul>
       </header>
     </>
   );

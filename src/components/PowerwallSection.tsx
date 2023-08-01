@@ -8,7 +8,7 @@ const PowerwallSection = () => {
                 Powerwall
               </h1>
             </header>
-            <footer className="flex flex-col flex-grow justify-end text-white pb-5">
+            <footer className="flex flex-col flex-grow justify-end text-white pb-20">
               <div className="flex flex-row justify-center gap-10">
                 <a
                   className=" text-sm rounded font-medium text-black bg-white/70 backdrop-blur-sm px-24 py-2 inline-block"

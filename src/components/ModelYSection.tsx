@@ -10,7 +10,7 @@ const ModelYSection = () => {
             <p className="text-black text-sm">Starting at $40,240</p>
             <p className="text-black text-sm">After Federal Tax Credit</p>
           </header>
-          <footer className="flex flex-col flex-grow justify-end text-white pb-5">
+          <footer className="flex flex-col flex-grow justify-end text-white pb-20">
             <div className="flex flex-row justify-center gap-10">
               <a
                 className=" text-sm rounded font-medium text-black bg-white/70 backdrop-blur-sm px-24 py-2 inline-block"
